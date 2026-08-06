@@ -1,0 +1,6 @@
+#! /bin/sh
+export LD_LIBRARY_PATH="$(find $VIRTUAL_ENV -name "*.so*" | grep -P "nvidia" | xargs dirname | sort -u | paste -d: -s -):$LD_LIBRARY_PATH"
+export PATH="$VIRTUAL_ENV/lib/python3.10/site-packages/nvidia/cuda_nvcc/bin:$PATH"
+
+export XLA_FLAGS="--xla_gpu_autotune_level=0"
+export TF_XLA_FLAGS="--tf_xla_auto_jit=0"

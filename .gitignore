@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# ml
+datasets/
+*cache*
+*.zip
+test
+simple_olf/
+blaze_*
+debug*
+haarcascade*
+*.onnx
+models/
+*_test.ipynb
